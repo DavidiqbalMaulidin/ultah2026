@@ -7,23 +7,87 @@ import { Heart, Camera, Calendar, MapPin, Star, Sparkles, ImageIcon } from "luci
 import Image from "next/image"
 
 const photos = [
+  // 💖 ROMANTIS (5)
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2019.02.12-t1RREIFUch3Tmt254Q0Ztg1oZ9JTvU.jpeg",
-    alt: "Foto romantis berdua di hujan",
-    caption: "Bersama dalam hujan",
+    src: "/memories/romantis/foto1.jpg",
+    alt: "Romantis 1",
+    caption: "Pelukan hangan darimu",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2019.02.12%20%281%29-xXE751JbEaXpBMQzmLejK7KUYDMAcd.jpeg",
-    alt: "Momen lucu bersama",
-    caption: "Tawa dan kebahagiaan",
+    src: "/memories/romantis/foto2.jpg",
+    alt: "Romantis 2",
+    caption: "senyum ala kita",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2019.02.13-kMXlWCa2S1WNCskX8PFxQrrh3eaxNs.jpeg",
-    alt: "Senyum bahagia berdua",
-    caption: "Senyum terindah",
+    src: "/memories/romantis/foto3.jpg",
+    alt: "Romantis 3",
+    caption: "Tatapan penuh cinta",
+  },
+  {
+    src: "/memories/romantis/foto4.jpg",
+    alt: "Romantis 4",
+    caption: "centil berdua",
+  },
+  {
+    src: "/memories/romantis/foto5.jpg",
+    alt: "Romantis 5",
+    caption: "Yang ini momen tak terlupakan",
+  },
+
+  // 😂 LUCU (5)
+  {
+    src: "/memories/lucu/foto1.jpg",
+    alt: "Lucu 1",
+    caption: "kiyutt so imoett😂",
+  },
+  {
+    src: "/memories/lucu/foto2.jpg",
+    alt: "Lucu 2",
+    caption: "Ekspresi konyol",
+  },
+  {
+    src: "/memories/lucu/foto3.jpg",
+    alt: "Lucu 3",
+    caption: "Mewek Time wkwk",
+  },
+  {
+    src: "/memories/lucu/foto4.jpg",
+    alt: "Lucu 4",
+    caption: "Helm by kurir Dlodok",
+  },
+  {
+    src: "/memories/lucu/foto5.jpg",
+    alt: "Lucu 5",
+    caption: "Wleeefotofoto",
+  },
+
+  // 📸 DAILY (5)
+  {
+    src: "/memories/daily/foto1.jpg",
+    alt: "Daily 1",
+    caption: "Kopag",
+  },
+  {
+    src: "/memories/daily/foto2.jpg",
+    alt: "Daily 2",
+    caption: "Ngopi santai",
+  },
+  {
+    src: "/memories/daily/foto3.jpg",
+    alt: "Daily 3",
+    caption: "Mangkat kerjo",
+  },
+  {
+    src: "/memories/daily/foto4.jpg",
+    alt: "Daily 4",
+    caption: "Quality time",
+  },
+  {
+    src: "/memories/daily/foto5.jpg",
+    alt: "Daily 5",
+    caption: "Senyum kecil",
   },
 ]
-
 const memories = [
   {
     title: "Pertama Kali Bertemu",
@@ -44,8 +108,8 @@ const memories = [
     icon: MapPin,
   },
   {
-    title: "Momen Bahagia",
-    date: "Selalu",
+    title: "Membuat momen Bahagia",
+    date: "Kita Selalu",
     description: "Tertawa bersama, menangis bersama, semua momen itu menjadikan kita lebih kuat.",
     icon: Star,
   },
@@ -74,9 +138,6 @@ export default function MemoriesPage() {
       <SparkleEffect />
       <Navigation />
 
-      <audio autoPlay loop>
-        <source src="/lagu.mp3" type="audio/mpeg" />
-      </audio>
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">

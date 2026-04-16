@@ -8,6 +8,7 @@ import { Gift, Heart, Sparkles, Star, PartyPopper, Music, Cake } from "lucide-re
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import confetti from "canvas-confetti"
+import Image from "next/image"
 
 export default function GiftPage() {
   const [isOpened, setIsOpened] = useState(false)
@@ -57,10 +58,6 @@ export default function GiftPage() {
       <FloatingHearts />
       <SparkleEffect />
       <Navigation />
-
-      <audio autoPlay loop>
-        <source src="/lagu.mp3" type="audio/mpeg" />
-      </audio>
 
       {/* Hero Section */}
       <section className="pt-32 pb-8 px-4">
@@ -161,18 +158,18 @@ export default function GiftPage() {
                       key={i}
                       className="absolute text-primary"
                       style={{
-                        top: `${20 + Math.random() * 60}%`,
-                        left: `${10 + Math.random() * 80}%`,
+                        top: "30%",
+                        left: "50%",
                       }}
                       animate={{
                         y: [-10, 10, -10],
                         opacity: [0.3, 0.8, 0.3],
                       }}
-                      transition={{
-                        duration: 2 + Math.random() * 2,
-                        repeat: Infinity,
-                        delay: Math.random() * 2,
-                      }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: i * 0.2,
+                    }}
                     >
                       <Sparkles className="w-6 h-6" />
                     </motion.div>
@@ -247,7 +244,7 @@ export default function GiftPage() {
                     transition={{ duration: 2, repeat: Infinity }}
                     className="text-primary"
                   >
-                    Selamat Ulang Tahun!
+                    Selamat Ulang Tahun ya
                   </motion.span>
                 </motion.h2>
 
@@ -258,11 +255,47 @@ export default function GiftPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <motion.h3
-                        className="font-serif text-2xl md:text-3xl text-foreground mb-6"
-                      >
-                        Ghita Hanifah Jauza Ilham
-                      </motion.h3>
+                    <motion.h3
+                      className="font-serif text-2xl md:text-3xl text-foreground mb-6"
+                    >
+                      Sayangkuu!!!
+                    </motion.h3>
+
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1.03 }}
+  transition={{
+    delay: 0.3,
+    duration: 2,
+    repeat: Infinity,
+    repeatType: "reverse",
+    ease: "easeInOut",
+  }}
+  className="mb-6 flex justify-center transform-gpu"
+>
+  {/* OUTER RGB FRAME (yang muter) */}
+  <div className="relative p-[4px] rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-spin-slow">
+    
+    {/* INNER FIXED LAYER */}
+    <div className="bg-background rounded-2xl p-[4px]">
+      
+      {/* IMAGE WRAPPER (NO ANIMASI BIAR GAK KEDIP) */}
+      <div className="rounded-2xl overflow-hidden shadow-[0_0_45px_rgba(236,72,153,0.75)]">
+        <Image
+          src="/memories/romantis/foto6.jpg"
+          alt="Foto sayangku"
+          width={250}
+          height={300}
+          className="object-cover rounded-2xl"
+          priority
+          unoptimized
+        />
+      </div>
+
+    </div>
+  </div>
+</motion.div>
+                                        
 
                       <div className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-8 md:p-12 mb-8">
                         <motion.div

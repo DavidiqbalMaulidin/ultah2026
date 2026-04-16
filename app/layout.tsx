@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import AudioPlayer from '@/components/AudioPlayer'
 
 const playfair = Playfair_Display({ 
   subsets: ["latin"],
@@ -47,6 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${poppins.variable} font-sans antialiased`}>
+
+        {/* 🔊 AUDIO GLOBAL */}
+        <AudioPlayer />
+
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -62,10 +62,6 @@ export default function WishesPage() {
       <FloatingHearts />
       <Navigation />
 
-      <audio autoPlay loop>
-        <source src="/lagu.mp3" type="audio/mpeg" />
-      </audio>
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <motion.div

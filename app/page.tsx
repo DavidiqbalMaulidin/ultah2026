@@ -40,10 +40,6 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-background overflow-hidden">
 
-      {/* 🎵 BACKGROUND MUSIC */}
-      <audio autoPlay loop>
-        <source src="/lagu.mp3" type="audio/mpeg" />
-      </audio>
 
       <FloatingHearts />
       <SparkleEffect />
@@ -154,7 +150,7 @@ export default function HomePage() {
           className="text-center"
         >
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" /> for Ghita
+            Made by @Daveeed_Iqbaaal for Ghita
           </p>
         </motion.div>
       </footer>
